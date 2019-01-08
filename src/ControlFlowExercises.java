@@ -1,10 +1,12 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main(String[] args){
 
     //LOOP BASICS EXERCISE
         int i = 5;
         while(i <= 15){
-            System.out.println(i);
+            System.out.println(i + " ");
             i++;
         }
     //DO WHILE LOOP COUNTS BY 2's STARTING WITH 0 AND ENDING IN 100
@@ -59,6 +61,30 @@ public class ControlFlowExercises {
                 System.out.println(n);
             }
         }
+
+
+    //DISPLAY TABLE OF POWERS
+        Scanner scanner = new Scanner(System.in);
+
+        String userChoice;
+        do {
+            System.out.print("Enter an integer here:");
+            int userInteger = scanner.nextInt();
+            System.out.println("Here is your table!");
+            System.out.println("number | squared | cubed");
+            System.out.println("------ | ------- | -----");
+
+            for (int k = 1; k <= userInteger; k++) {
+                int numberSquared = (int) Math.pow(k, 2);
+                int numberCubed = (int) Math.pow(k, 3);
+
+                String message = "\n" + k + "       " + numberSquared + "       " + numberCubed;
+
+                System.out.print(message);
+                userChoice = scanner.next();
+            }
+        }while(userChoice.equalsIgnoreCase("y") || userChoice.equalsIgnoreCase("yes"));
+
 
 
 
