@@ -1,7 +1,7 @@
 public class ControlFlowExercises {
     public static void main(String[] args){
 
-
+    //LOOP BASICS EXERCISE
         int i = 5;
         while(i <= 15){
             System.out.println(i);
@@ -42,6 +42,27 @@ public class ControlFlowExercises {
         for(long y = 2; y < 1000000; y *= y){
             System.out.println(y);
         }
+
+    //FIZZBUZZ EXERCISE
+        for(int n = 1; n <= 100; n++){
+            if(n % 3 == 0){
+
+                if(n % 5 == 0){
+                    System.out.println("FizzBuzz");
+                }else {
+                    System.out.println("Fizz");
+                }
+            }else if(n % 5 == 0){
+                System.out.println("Buzz");
+
+            }else {
+                System.out.println(n);
+            }
+        }
+
+
+
+
 
     }
 }
